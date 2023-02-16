@@ -15,14 +15,16 @@ const initApp = () => {
     view.addEventListener("click", (event) =>{
         view.style.backgroundColor="purple";
 
-    },true);
+    });
 
     div.addEventListener("click", (event) =>{
         div.style.background="blue";
-    },true);
+    });
 
     h2.addEventListener("click", (event) =>{
         event.target.textContent="Clicked";
-    },true);
+    });
 }
+
+
 
