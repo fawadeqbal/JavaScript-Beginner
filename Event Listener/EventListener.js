@@ -4,7 +4,7 @@ const div = document.getElementsByClassName("black")
 console.log(div)
 const h2 =  document.querySelector('h2');
 
-const doSomething = () => {
-    alert("doing something");
+const doSomething = (e) => {
+    e.textContent="Fawad";
 }
-h2.addEventListener("click", doSomething,false);
+h2.addEventListener("click", ()=>doSomething(h2),false);
