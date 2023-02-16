@@ -15,29 +15,32 @@ const initApp = () => {
     view.addEventListener(
         "click",
         (event) =>{
-        event.stopPropagation();
-        view.style.backgroundColor="purple";
-        console.log("view")
+            view.classList.toggle("purple");
+            view.classList.toggle("darkblue");
+            
         },
-        true
+        false
     );
 
     div.addEventListener(
         "click",
         (event) =>{
-        div.style.background="blue";
-        console.log("div")
+            div.classList.toggle("blue");
+            div.classList.toggle("black");
         },
-        true
+        false
     );
 
     h2.addEventListener(
         "click",
         (event) =>{
-        event.target.textContent="Clicked";
-        console.log("h2")
+            const myText = event.target.textContent;
+            myText === "My 2nd View"
+              ? (event.target.textContent="Clicked")
+              :(event.target.textContent = "My 2nd View");
+            
         },
-        true
+        false
     );
 }
 
