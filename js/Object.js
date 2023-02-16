@@ -10,11 +10,11 @@ const band = {
     }
 };
 
-
+// Inheritance
 const truck = Object.create(band);
 truck.engine="High";
 
-// Inheritance
+
 console.log(truck)
 
 console.log(Object.keys(band));
