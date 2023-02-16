@@ -42,7 +42,23 @@ const initApp = () => {
         },
         false
     );
+
+    const nav = document.querySelector("nav");
+    nav.addEventListener(
+        "mouseover",
+        (event) => {
+            event.target.classList.toggle("height100");
+        }
+    );
+
+    nav.addEventListener(
+        "mouseout",
+        (event) => {
+            event.target.classList.remove("height100");
+        }
+    )
 }
+
 
 
 
