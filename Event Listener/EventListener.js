@@ -1,10 +1,28 @@
 
-const view = document.getElementById("view2");
-const div = document.getElementsByClassName("black")
-console.log(div)
-const h2 =  document.querySelector('h2');
 
-const doSomething = (e) => {
-    e.textContent="Fawad";
+
+document.addEventListener("readystatechange", (event) =>{
+    if(event.target.readyState==="complete"){
+        console.log("ReadyState: Complete");
+        initApp();
+    }
+})
+
+const initApp = () => {
+    const view = document.querySelector("#view2");
+    const div = view.querySelector("div")
+    const h2 =  div.querySelector('h2');
+    view.addEventListener("click", (event) =>{
+        view.style.backgroundColor="purple";
+
+    },true);
+
+    div.addEventListener("click", (event) =>{
+        div.style.background="blue";
+    },true);
+
+    h2.addEventListener("click", (event) =>{
+        event.target.textContent="Clicked";
+    },true);
 }
-h2.addEventListener("click", ()=>doSomething(h2),false);
+
