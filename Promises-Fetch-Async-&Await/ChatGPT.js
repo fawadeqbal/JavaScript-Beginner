@@ -1,4 +1,4 @@
-const apiKey = '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';
+const apiKey = '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';
 const apiUrl = 'https://api.openai.com/v1/engines/davinci-codex/completions';
 
 const getChatMessage = async (message) => {
