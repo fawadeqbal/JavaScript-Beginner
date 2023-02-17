@@ -1,4 +1,4 @@
-//fetch API
+//Fetch API
 
 const users = fetch("https://jsonplaceholder.typicode.com/users")
 .then(res =>{
