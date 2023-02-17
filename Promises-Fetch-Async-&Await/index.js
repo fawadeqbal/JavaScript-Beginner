@@ -10,3 +10,13 @@ const myPromise = new Promise((resolve, reject)=>{
 });
 
 console.log(myPromise);
+
+myPromise.then(value =>{
+    return value+" my Statement";
+})
+.then(newValue =>{
+    console.log(newValue);
+})
+.catch( err =>{
+    console.error(err);
+})
