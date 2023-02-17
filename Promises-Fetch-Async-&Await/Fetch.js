@@ -1,7 +1,9 @@
 //Fetch API
+// Fetch return Promise
+const users = fetch("https://jsonplaceholder.typicode.com/users");
 
-const users = fetch("https://jsonplaceholder.typicode.com/users")
-.then(res =>{
+// users is a promise
+users.then(res =>{
     return res.json();
 })
 .then(data=>{
