@@ -1,12 +1,4 @@
 
-const getDataFromForm = () => {
-    const requestObj = {
-        type: "knock-knock"
-    };
-
-    return requestObj;
-}
-
 const buildRequestUrl = () => {
 
     return `https://api.jokes.one/jod?category=animal`;
@@ -29,10 +21,19 @@ const postJokeToPage = (joke) =>{
 }
 
 const processJokeRequest = async () => {
-    const reqData = getDataFromForm();
+    // const reqData = getDataFromForm();
     const reqUrl = buildRequestUrl();
     await requestJoke(reqUrl);
-    console.log("Finished");
+  
 }
 
 processJokeRequest();
+
+
+// const getDataFromForm = () => {
+//     const requestObj = {
+//         type: "knock-knock"
+//     };
+
+//     return requestObj;
+// }
