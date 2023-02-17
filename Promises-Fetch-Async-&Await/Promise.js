@@ -2,9 +2,9 @@
 
 const myPromise = new Promise((resolve, reject)=>{
     const error= undefined;
-    if(!error){
+    if (!error) {
         resolve("Yes! resolved the promise!");
-    }else{
+    } else {
         reject("No! rejected the Promise.");
     }
 });
