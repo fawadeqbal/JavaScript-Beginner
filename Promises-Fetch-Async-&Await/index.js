@@ -1,7 +1,7 @@
 
 
 const myPromise = new Promise((resolve, reject)=>{
-    const error= false;
+    const error= undefined;
     if(!error){
         resolve("Yes! resolved the promise!");
     }else{
@@ -9,14 +9,16 @@ const myPromise = new Promise((resolve, reject)=>{
     }
 });
 
-console.log(myPromise);
+const myNextPromise = new Promise((resolve,reject ) => {
+    setTimeout(()=>{
+        resolve("myNextPromise resolved!");
+    },3000);
+});
+
+myNextPromise.then(value =>{
+    console.log(value);
+})
 
 myPromise.then(value =>{
-    return value+" my Statement";
-})
-.then(newValue =>{
-    console.log(newValue);
-})
-.catch( err =>{
-    console.error(err);
+    console.log(value);
 })
